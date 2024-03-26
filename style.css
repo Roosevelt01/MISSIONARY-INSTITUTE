@@ -595,10 +595,41 @@ header #menu {
     text-align: start!important;
     color: var(--white);
     font-weight: 700;
-    padding-bottom: 3rem;
+    position: relative;
+}
+
+
+.underline:before {
+  width: 35%;
+  height: 0.1rem;
+  position: absolute;
+  background:#f9c658;
+  content: "";
+  left: 0;
+  bottom: -0.5rem;
+  border-radius: 0.3rem;
+  transform-origin: left center;
+  padding-bottom: 10px;
+}
+
+.bounce:before {
+  animation: bouncey-line 2s ease-in-out infinite alternate;
+}
+
+@keyframes bouncey-line {
+  0% {
+    transform: translateX(10vw) scaleX(2);
+  }
+  50% {
+    transform: translateX(0) scaleX(0.5);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 details {
+    margin-top: 3rem;
     width: 100%;
 }
 
