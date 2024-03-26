@@ -464,11 +464,11 @@ header #menu {
     display: flex;
     justify-content: center;
     gap: 25px;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .about .container .announce {
-    width: 50%;
+    width: 100%;
     position: relative;
     z-index: 1;
 }
@@ -686,6 +686,8 @@ details[open] summary:before {
 .block-two{  
     flex: 0 0 40%;
     margin: 20px 0;
+    display: grid;
+    place-items: center;
 }
 
 .wrapper {
@@ -819,7 +821,7 @@ details[open] summary:before {
 
 .form-container {
   max-width: 100%;
-  height: 100%;
+  height: auto;
   background-color: #fff;
   padding: 32px 24px;
   font-size: 14px;
@@ -924,6 +926,60 @@ details[open] summary:before {
   text-decoration: underline;
 }
 
+#picassoFooter {
+  background-color:var(--blue);
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-navigation, .footer-contact, .footer-social {
+  margin: 10px;
+}
+
+.footer-navigation h3, .footer-contact h3, .footer-social h3 {
+  color: #f0f0f0;
+  margin-bottom: 15px;
+}
+
+.footer-navigation ul, .footer-social .social-icons {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-navigation ul li, .social-icon {
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer-navigation ul li a, .social-icon {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.social-icon{
+  color: var(--black);
+}
+
+.social-icon {
+  display: inline-block;
+  padding: 8px;
+  background-color: var(--white);
+  margin-right: 5px;
+}
+
+.social-icon:hover, .footer-navigation ul li a:hover {
+  transform: scale(1.1);
+}
+
+.footer-art canvas {
+  max-width: 100px;
+  height: auto;
+  margin-top: 20px;
+}
 
 
 
@@ -963,15 +1019,6 @@ details[open] summary:before {
         display: none;
     }
 
-    .about .container {
-        justify-content: flex-start;
-    }
-
-    .announce {
-        width: 100% !important;
-
-    }
-
     .block {
         flex-direction: column;
     }
@@ -1002,6 +1049,13 @@ details[open] summary:before {
 
     details p {
        font-size: 2.5vmin;
+    }
+
+       /* Contact */
+
+       .conteniendo{
+        min-height:auto;
+        padding: 15px 4%;
     }
 }
 
@@ -1111,6 +1165,11 @@ details[open] summary:before {
       .form-container .form-submit-btn {
         padding: 10px;
       }
+
+      .conteniendo{
+        min-height:auto;
+        padding: 15px 4%;
+    }
 }
 
 @media(max-width:590px) {
@@ -1142,4 +1201,25 @@ details[open] summary:before {
         padding-bottom: 3rem;
     }
 
+
+    /* Contact */
+
+    .conteniendo{
+      min-height:auto;
+      padding: 15px 4%;
+  }
+    .block-two {
+      flex:0;
+      margin: 0;
+    }
+
+    /* Footer*/
+    #picassoFooter {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-art canvas {
+      max-width: 100%;
+  }
 }
